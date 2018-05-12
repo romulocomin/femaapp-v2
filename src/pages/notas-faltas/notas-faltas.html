@@ -1,0 +1,59 @@
+<ion-header>
+
+  <custom-header [title]="'Notas'"></custom-header>
+
+</ion-header>
+
+<ion-content padding="true">
+
+
+  <ion-item-group>
+    <ion-item>
+      <ion-label color="dark">Selecione o periodo</ion-label>
+      <ion-select block placeholder="Periodo" [(ngModel)]="selected" (ionChange)="onItemSelection(selected)">
+        <ion-option *ngFor="let item of periodo" [value]="item.id">{{item.curso}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-item-group>
+  <ion-item-divider> </ion-item-divider>
+
+  <ion-item>
+    <ion-label color="primary">Selecione a opção</ion-label>
+    <ion-select>
+      <ion-option selected="selected" value="5384">D0000225-ANATOMIA E FISIOLOGIA - TM (686)</ion-option>
+      <ion-option value="5400">D0000242-ANATOMIA E FISIOLOGIA APLICADA À BELEZA E À SAÚDE - TM (686)</ion-option>
+      <ion-option value="5389">D0000230-ANATOMIA E FISIOLOGIA DO APARELHO LOCOMOTOR - TM (686)</ion-option>
+      <ion-option value="5399">D0000241-ANATOMIA REGIONAL E DE SUPERFÍCIE - TM (686)</ion-option>
+      <ion-option value="5383">D0000224-CUIDADOS E HIGIENE - TM (686)</ion-option>
+      <ion-option value="5401">D0000243-EMPRENDEDORISMO E GERENCIAMENTO DE PEQUENOS NEGÓCIOS EM MASSOTERAPIA - TM (686)</ion-option>
+      <ion-option value="5405">D0000248-ESTÁGIO 400 HORAS - TM (686)</ion-option>
+      <ion-option value="5393">D0000234-FARMACOLOGIA E COSMETOLOGIA APLICADAS À MASSOTERAPIA - TM (686)</ion-option>
+      <ion-option value="5385">D0000226-INTRODUÇÃO À MASSOTERAPIA I - TM (686)</ion-option>
+      <ion-option value="5394">D0000235-INTRODUÇÃO À MASSOTERAPIA II - TM (686)</ion-option>
+      <ion-option value="5392">D0000233-LEGISLAÇÃO APLICADA - TM (686)</ion-option>
+      <ion-option value="5381">D0000222-LINGUAGEM E COMUNICAÇÃO - TM (686)</ion-option>
+      <ion-option value="5388">D0000229-MASSAGEM ESTÉTICA - TM (686)</ion-option>
+      <ion-option value="5395">D0000236-MASSOTERAPIA - TERAPÊUTICA E DESPORTIVA -TM (686)</ion-option>
+      <ion-option value="5402">D0000244-MASSOTERAPIA TÉCNICAS COMPLEMENTARES - TM (686)</ion-option>
+      <ion-option value="5403">D0000245-NOÇÕES DE NUTRIÇÃO E DIETÉTICA - TM (686)</ion-option>
+      <ion-option value="5404">D0000246-ORIENTAÇÃO METODOLÓGICA - TM (686)</ion-option>
+      <ion-option value="5391">D0000232-PATOLOGIA APLICADA - TM (686)</ion-option>
+      <ion-option value="5387">D0000228-PRIMEIROS SOCORROS - TM (686)</ion-option>
+      <ion-option value="5398">D0000240-RELAÇÕES HUMANAS E ÉTICA PROFISSIONAL - TM (686)</ion-option>
+      <ion-option value="5382">D0000223-RELAÇÕES HUMANAS E PROFISSIONAIS I - TM (686)</ion-option>
+      <ion-option value="5390">D0000231-RELAÇÕES HUMANAS E PROFISSIONAIS II - TM (686)</ion-option>
+      <ion-option value="5386">D0000227-TÉCNICAS PARALELAS I - TM (686)</ion-option>
+      <ion-option value="5396">D0000237-TÉCNICAS PARALELAS II - TM (686)</ion-option>
+      <ion-option value="5397">D0000238-TÉCNICAS PARALELAS III - TM (686)</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-item-divider color="secondary">NOTAS </ion-item-divider>
+  </ion-item>
+
+  <ion-item>
+    <ion-item-divider color="danger">FALTAS </ion-item-divider>
+  </ion-item>
+</ion-content>

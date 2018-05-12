@@ -1,0 +1,56 @@
+<ion-header>
+
+  <custom-header [title]="'Analise Currícular'"></custom-header>
+
+</ion-header>
+<ion-content padding="true">
+  <ion-item-group>
+    <ion-item>
+      <ion-label>Selecione o periodo</ion-label>
+      <ion-select block placeholder="Periodo" [(ngModel)]="selected" (ionChange)="onItemSelection(selected)">
+        <ion-option *ngFor="let item of periodo" [value]="item.id">{{item.curso}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-item-group>
+  <custom-legenda></custom-legenda>
+  <ion-item-group>
+
+    <ion-list>
+
+      <ion-item-divider color="light" outline clear>
+
+        MODULO I
+
+      </ion-item-divider>
+
+      <ion-item *ngFor="let item of history">
+
+        <h2>
+          <ion-icon name="radio-button-on" color="danger"></ion-icon> {{item.disciplina}}</h2>
+        <p>
+          <b>Cód. disciplina:</b>{{item.cod_disciplina}}
+
+        </p>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-list>
+
+      <ion-item-divider color="light" outline >
+
+        MODULO I
+
+      </ion-item-divider>
+
+      <ion-item *ngFor="let item of historyII">
+        <h2>{{item.disciplina}}</h2>
+        <p>
+          <b>Cód. disciplina:</b>{{item.cod_disciplina}}
+
+        </p>
+      </ion-item>
+    </ion-list>
+
+  </ion-item-group>
+</ion-content>
